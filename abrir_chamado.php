@@ -1,3 +1,5 @@
+<?php require_once "acessValidator.php"; ?>
+
 <html>
 
 <head>

@@ -34,10 +34,18 @@
                 <input name="userPassword" type="password" class="form-control" placeholder="Senha">
               </div>
 
-              <?php if(isset($_GET['login']) && $_GET['login'] =='error') { ?>
+              <?php if (isset($_GET['login']) && $_GET['login'] == 'error') { ?>
 
                 <div class="text-danger">
                   Invalid User
+                </div>
+
+              <?php } ?>
+
+              <?php if (isset($_GET['login']) && $_GET['login'] == 'error2') { ?>
+
+                <div class="text-danger">
+                  Web Page Protected, Make Sure You Are Logged In To Acess Them
                 </div>
 
               <?php } ?>

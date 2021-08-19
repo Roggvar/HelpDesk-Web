@@ -1,5 +1,7 @@
 <?php
 
+    session_start(); //
+
     $userAuthenticated = false; // Login authentication control
 
     // UserDB
@@ -17,13 +19,12 @@
 
     // Behavior for when a user is authenticated or not
     if($userAuthenticated) {
-
+        $_SESSION['authenticated'] = 'YES';
     } else {
-        header('Location: index.php?login=error'); // Redirects to the index.php
+        $_SESSION['authenticated'] = 'NO';
+        header('Location: index.php?login=error'); // Redirects to the index.php with a login error
     }
 
     // Receives the login info from the index.php
     $_POST['userEmail'];
     $_POST['userPassword'];
-
-?>
