@@ -20,6 +20,7 @@
     // Behavior for when a user is authenticated or not
     if($userAuthenticated) {
         $_SESSION['authenticated'] = 'YES';
+        header('Location: home.php'); // Redirects to the home.php page
     } else {
         $_SESSION['authenticated'] = 'NO';
         header('Location: index.php?login=error'); // Redirects to the index.php with a login error
