@@ -55,6 +55,13 @@
               
                 $issueData = explode('#', $issue);
 
+                // Tests if is an adm or user logged
+                if($_SESSION['userId'] == 2) {
+                  if($_SESSION['id'] != $issueData[0]) {
+                    continue;
+                  }
+                }
+
                 if(count($issueData) < 3) {
                   continue;
                 }
@@ -64,13 +71,13 @@
               <div class="card mb-3 bg-light">
                 <div class="card-body">
                   <h5 class="card-title">
-                    <?= $issueData[0] ?>
+                    <?= $issueData[1] ?>
                   </h5>
                   <h6 class="card-subtitle mb-2 text-muted">
-                    <?= $issueData[1] ?>
+                    <?= $issueData[2] ?>
                   </h6>
                   <p class="card-text">
-                    <?= $issueData[2] ?>
+                    <?= $issueData[3] ?>
                   </p>
 
                 </div>

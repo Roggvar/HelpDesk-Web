@@ -1,5 +1,7 @@
 <?php
 
+    session_start();
+
     $_POST;
 
     // Text assembly
@@ -7,7 +9,7 @@
     $category = str_replace('#', "-", $_POST['category']);
     $desc = str_replace('#', "-", $_POST['desc']);
 
-    $text = $title . '#' . $category . '#' . $desc . PHP_EOL;
+    $text = $_SESSION['id'] . '#' . $title . '#' . $category . '#' . $desc . PHP_EOL;
 
     // File management
     $file = fopen('issue.hd', 'a');
