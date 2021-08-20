@@ -10,7 +10,7 @@
     $text = $title . '#' . $category . '#' . $desc . PHP_EOL;
 
     // File management
-    $file = fopen('file.hd', 'a');
+    $file = fopen('issue.hd', 'a');
     fwrite($file, $text);
     fclose($file);
 
