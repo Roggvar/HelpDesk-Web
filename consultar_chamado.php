@@ -55,7 +55,7 @@
               
                 $issueData = explode('#', $issue);
 
-                // Tests if is an adm or user logged
+                // Tests if it is an adm or user logged in
                 if($_SESSION['userId'] == 2) {
                   if($_SESSION['id'] != $issueData[0]) {
                     continue;
